@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit data</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if success %}
+    <script type="text/javascript">
+        alert('sucessfully')
+    </script>
+    {% endif%}
+<h1>edit ---> Update Data</h1>
+    {% if d %}
+
+    <label>email  :  </label>
+    <label>{{d.UserEmail}}</label><br>
+    <label>full name</label>
+    <input type="text"value="{{d.UserFullName}}" name="fullname"></input><br>
+        <label>password</label>
+        <input type="text" value="{{d.UserPassword}}" name="password"></input><br>
+        <label>mobile</label>
+        <input type="text" value="{{d.UserMobile}}" name="mobile"></input><br>
+     <input type="submit" value="update" name="submit1" id="submit1"><br>
+
+    {% endif%}
+
+
+</form>
+</body>
+</html>

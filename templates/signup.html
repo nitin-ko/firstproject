@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if success %}
+    <script type="text/javascript">
+        alert('sucessfully')
+    </script>
+    {% endif %}
+<label> Full name</label>
+    <input type="text" name="fullname" id="fullname"><br>
+<label>mobile</label>
+    <input type="text" name="mobile" id="mobile"><br>
+<label>Email</label>
+    <input type="text" name="email" id="email">    <br>
+<label>password</label>
+    <input type="password" name="password" id="password"><br>
+<input type="submit" name="sub" id="sub">
+</form>
+
+</body>
+</html>
